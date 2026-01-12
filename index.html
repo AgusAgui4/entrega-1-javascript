@@ -1,9 +1,140 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <title>Tienda Online</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .finalizar {
+      background-color: #28a745;
+    }
+
+    .finalizar:hover {
+      background-color: #1e7e34;
+    }
+
+    .sections {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .acciones button {
+      background-color: #28a745;
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+
+    .acciones button.eliminar {
+      background-color: #dc3545;
+    }
+
+    #total {
+      margin-top: 20px;
+      text-align: right;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
 </head>
+
 <body>
-    <script src="main.js"></script>
+  <div class="container">
+    <h1>🛒 Tienda Online</h1>
+
+    <div class="buttons">
+      <button id="btnProductos">Ver productos</button>
+      <button id="btnTotal">Ver total</button>
+      <button id="btnVaciar">Vaciar carrito</button>
+      <button id="btnFinalizar" class="finalizar">Terminar compra</button>
+    </div>
+
+    <div class="sections">
+      <div>
+        <h2>Productos disponibles</h2>
+        <ul id="listaProductos"></ul>
+      </div>
+
+      <div>
+        <h2>Carrito</h2>
+        <ul id="listaCarrito"></ul>
+        <div id="total"></div>
+      </div>
+    </div>
+
+    <footer>
+      Proyecto JavaScript – by: Agustin Aguilar
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
 </body>
+
 </html>
