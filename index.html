@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Tienda Online</title>
-
-  <!-- CSS externo -->
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <title>Ecommerce JS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
 </head>
 
 <body>
-  <div class="container">
-    <h1>🛒 Tienda Online</h1>
 
-    <div class="buttons">
-      <button id="btnProductos">Ver productos</button>
-      <button id="btnTotal">Ver total</button>
-      <button id="btnVaciar">Vaciar carrito</button>
-      <button id="btnFinalizar" class="finalizar">Terminar compra</button>
-    </div>
+  <h1>Tienda Online Agus</h1>
 
-    <div class="sections">
-      <div>
-        <h2>Productos disponibles</h2>
-        <ul id="listaProductos"></ul>
-      </div>
+<div class="contenedor">
 
-      <div>
-        <h2>Carrito</h2>
-        <ul id="listaCarrito"></ul>
-        <div id="total"></div>
-      </div>
-    </div>
-
-    <footer>
-      Proyecto JavaScript – by: Agustin Aguilar
-    </footer>
+  <!-- PRODUCTOS -->
+  <div class="catalogo">
+    <h2>Productos</h2>
+    <button id="btnProductos">Mostrar productos</button>
+    <div id="listaProductos" class="gridProductos"></div>
   </div>
 
-  <script src="js/main.js"></script>
+  <!-- PANEL -->
+  <aside class="panelDerecho">
+
+    <div class="carrito">
+      <h2>Carrito</h2>
+      <ul id="listaCarrito"></ul>
+
+      <div class="botones">
+        <button id="btnTotal">Calcular total</button>
+        <button id="btnVaciar">Vaciar</button>
+        <button id="btnFinalizar">Finalizar compra</button>
+      </div>
+
+      <h3 id="total"></h3>
+    </div>
+
+    <div class="cliente">
+      <h2>Datos del cliente</h2>
+      <input id="nombreCliente" placeholder="Nombre">
+      <input id="emailCliente" placeholder="Email">
+      <input id="direccionCliente" placeholder="Dirección">
+    </div>
+
+  </aside>
+
+</div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>

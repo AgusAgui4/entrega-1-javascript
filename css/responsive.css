@@ -1,0 +1,91 @@
+/*  TABLET  */
+@media (max-width: 1024px) {
+
+  .contenedor{
+    flex-direction: column;
+  }
+
+  .catalogo{
+    width:100%;
+  }
+
+  .panelDerecho{
+    width:100%;
+    position:relative;
+    top:0;
+  }
+
+  .gridProductos{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/*  CELULAR  */
+@media (max-width: 600px) {
+
+  h1{
+    padding:18px;
+    font-size:22px;
+    text-align:center;
+  }
+
+  h2{
+    padding:14px;
+    font-size:18px;
+  }
+
+  .contenedor{
+    padding:15px;
+    gap:18px;
+  }
+
+  .gridProductos{
+    grid-template-columns: 1fr;
+  }
+
+  .productoCard img{
+    height:180px;
+  }
+
+  .infoProducto{
+    padding:12px;
+  }
+
+  .precio{
+    font-size:20px;
+  }
+
+  .btnAgregar{
+    width:100%;
+    padding:12px;
+    font-size:15px;
+  }
+
+  .carrito{
+    padding:16px;
+  }
+
+  #listaCarrito li{
+    font-size:14px;
+  }
+
+  .acciones{
+    flex-wrap:wrap;
+  }
+
+  .acciones button{
+    flex:1;
+  }
+
+
+  .botones button{
+    padding:14px;
+    font-size:15px;
+  }
+
+  .cliente input{
+    width:100%;
+  }
+
+}
